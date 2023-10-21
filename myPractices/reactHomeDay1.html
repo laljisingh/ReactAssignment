@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        overflow: hidden;
+      }
+      .h1 {
+        color: rgb(201, 78, 212);
+      }
+      #main {
+        width: 80%;
+        margin: 0px auto;
+        padding: 15px;
+        text-align: justify;
+        border: 1px solid green;
+        font-family: "Times New Roman", Times, serif;
+        background-color: rgb(173, 218, 203);
+        box-shadow: 2px 2px 15px 2px gray;
+      }
+      #main:hover {
+        background-color: rgba(64, 182, 80, 0.521);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const rootElement = document.querySelector("#root");
+      const root = ReactDOM.createRoot(rootElement);
+
+      function ShowCode() {
+        return (
+          <div id="main">
+            <h1 class="h1">Hello react</h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+              earum animi voluptatibus inventore beatae libero omnis obcaecati,
+              blanditiis illum amet.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Doloribus harum dolor consequuntur quo quia perspiciatis placeat,
+              illo quaerat modi nam. Ratione rerum voluptatem voluptatum quos
+              soluta placeat saepe unde ea <a href="#">go to next part</a>{" "}
+              possimus et aspernatur vel a voluptas quasi, veritatis mollitia
+              architecto aperiam officia eum. Labore recusandae molestiae nam
+              nihil consectetur?
+            </p>
+          </div>
+        );
+      }
+      root.render(<ShowCode />);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        #h{
+            color: aquamarine;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="text/babel">
+   const rootElement = document.querySelector("#root");
+        const root = ReactDOM.createRoot(rootElement);
+
+        // const h1 = React.createElement("h1", { id: "main_header" }, "hello World");
+
+        // const topChild = React.createElement("div", { id: "top" }, React.createElement("h1", {}, "Intro"));
+        // const bottomChild = React.createElement("div", { id: "bottom" }, React.createElement("p", {}, "Desc"));
+        //  const Comp = React.createElement("div", { id: "main_div" }, topChild, bottomChild);
+
+        function Comp(){
+            const arr=[
+                {
+                    "fname":"lal",
+                    "sname":"singh"
+                },
+                {
+                    "fname":"amar",
+                    "sname":"singh"
+                }
+            ]
+            return (
+                <div>
+                    <h1>{arr.map((ele)=>{
+                        return <p>{ele.fname} {ele.sname}</p>
+                    })}</h1>
+                </div>
+            );
+        }
+        function Comp2(){
+            return (
+                <div>
+                    <h1 id="h">helo lalji</h1>
+                </div>
+            );
+        }
+        // root.render(<Comp />);
+        root.render(<Comp />);
+  </script>
+</html>
