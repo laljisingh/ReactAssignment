@@ -1,6 +1,7 @@
 {
   "name": "day4classwork",
-  "homepage": "https://myusername.github.io/my-app",
+  "private": true,
+  "homepage": "https://laljisingh.github.io/myPractices/AssignmentOfReact/day4classwork",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,6 +15,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
